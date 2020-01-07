@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<chart caption="xxx" subCaption="xxxx" xAxisName="xxxxx" yAxisName="xxxxxx">
+<categories>
+	<category label="201010"/>
+	<category label="201011"/>
+</categories>
+<dataset seriesName="lz" renderAs="line">
+	<set value="2000" />
+	<set value="3200" />
+</dataset>
+<dataset seriesName="xj" renderAs="area">
+	<set value="2000" />
+	<set value="3200" />
+</dataset>
+</chart>

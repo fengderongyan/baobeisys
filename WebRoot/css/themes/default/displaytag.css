@@ -1,0 +1,148 @@
+@CHARSET "UTF-8";
+
+/**
+ * @author: chang  
+ */
+
+table.list td {
+	valign:middle;
+}
+
+table.list{
+	border-collapse: collapse;
+	color: #14397D;
+	font-size: 12px;
+	width:100%;
+	border: none;
+}
+
+table.list thead tr {
+	background-color:#4DB6E3;
+	font-size: 13px;
+}
+
+.displayTable thead tr th {
+	padding: 1px 4px 1px 4px;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #E1E5E8;
+	height: 32px;
+	font-weight: bold;
+	font-family: "Tahoma","Arial","微软雅黑";
+	color: black;
+}
+
+.displayTable td {
+	padding: 1px 4px 1px 4px;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #E1E5E8;
+	height: 25px;
+}
+
+table.list tr.even {
+	background-color: #FFFFFF;
+}
+
+table.list tr.odd {
+	background-color: #FFFFFF;	
+}
+
+table.list tr.over {
+	background-color: #FBF7E5;
+}
+
+th a,th a:visited {
+	text-decoration: none;	
+	color: black;
+}
+
+th a:hover {
+	text-decoration: none;
+	color: black;
+}
+
+th.sorted a,th.sortable a {
+	background-position: right;
+	display: block;
+	width: 100%;	
+}
+
+th.sortable a {
+	background-image: url('images/arrow_off.png');
+	background-repeat: no-repeat;
+}
+
+th.order1 a {
+	background-image: url('images/arrow_down.png');
+	background-repeat: no-repeat;
+}
+
+th.order2 a {
+	background-image: url('images/arrow_up.png');
+	background-repeat: no-repeat;
+}
+
+div.exportlinks {
+	background-color: #F3F3F3;
+	padding: 2px 4px 2px 4px;
+	border: 1px dotted #999;
+	margin: 2px 0 0px 0;
+	position: relative;
+	left: expression(this.offsetParent.scrollLeft);
+}
+
+span.export {
+	padding: 0 4px 1px 4px;
+	display: inline-block;
+	cursor: pointer;
+	text-align: left;
+	position: relative;
+	left: expression(this.offsetParent.scrollLeft);
+	font-family: "宋体","Tahoma","Arial","微软雅黑";
+	font-size:12px;	
+}
+
+span.pagebanner {
+	background-color: #F3F3F3;
+	padding: 2px 4px 2px 4px;
+	border: 1px dotted #999;
+	margin-top: 10px;
+	display: block;
+	border-bottom: none;
+}
+
+span.pagelinks {
+	background-color: #F3F3F3;
+	padding: 2px 4px 2px 4px;
+	border: 1px dotted #999;
+	display: block;
+	border-top: none;
+	margin-bottom: -5px;
+	text-align:left;
+	position: relative;
+	left: expression(this.offsetParent.scrollLeft);
+	font-size:12px;	
+}
+
+span.pagelinks a {
+	color: #5692D0;	
+}
+
+.right {
+	width: 65%;
+	text-align: right;
+	position: absolute;
+	right: 8px;
+}
+
+.left {
+	width: 35%;
+	text-align: left;
+}
+
+.noscroll {
+	overflow: hidden;
+	height:20px;
+	width: 100%;
+}

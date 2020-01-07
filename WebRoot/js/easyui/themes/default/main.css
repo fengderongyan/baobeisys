@@ -1,0 +1,198 @@
+@CHARSET "UTF-8";
+/*---滚动条默认显示样式--*/  
+::-webkit-scrollbar-thumb{  
+   background-color: #9BBBF4;  
+   outline-offset:-1px;  
+   outline:1px solid #fff;  
+   -webkit-border-radius:1px;  
+   border: 1px solid #fff;  
+}  
+/*---鼠标点击滚动条显示样式--*/  
+::-webkit-scrollbar-thumb:hover{  
+   background-color: #9BBBF4;  
+   -webkit-border-radius:1px;  
+}  
+/*---滚动条大小--*/  
+::-webkit-scrollbar{  
+   width:15px;  
+}  
+/*---滚动框背景样式--*/  
+::-webkit-scrollbar-track-piece{  
+   background-color:#E1EDFD;  
+   -webkit-border-radius:0;  
+}
+
+body.sgy {
+	color: #000000;
+	font-size: 12px;
+	padding: 0px;
+	margin: 0px;
+	background-color: #fafafa;
+	font-family: "微软雅黑", "Tahoma", "Arial", "宋体";
+	scrollbar-highlight-color:   #FFFFFF;   /*滚动条及箭头的亮边色*/   
+    scrollbar-shadow-color:   #E1E1E1;         /*滚动条及箭头的暗边色*/   
+    scrollbar-3dlight-color:   #E1E1E1;       /*滚动条及箭头的3D亮边色*/   
+    scrollbar-track-color:   #E1EDFD;           /*滚动条底色*/   
+    scrollbar-darkshadow-color:#FFFFFF;   /*滚动条及箭头的暗边阴影色*/   
+    scrollbar-base-color:   #9BBBF4;             /*滚动条的基本颜色*/   
+    scrollbar-arrow-color:   #35507A;           /*箭头的颜色*/   
+    scrollbar-face-color:   #9BBBF4;             /*滚动条及箭头的颜色*/   
+}
+
+body.sgy table.sgy {
+	border-collapse: collapse;
+	width:100%;
+	border-bottom: solid 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table.sgy th,table.sgy tr,table.sgy td {
+	padding: 0px 0px 0px 10px !important;
+	border: 1px solid #BEBEBE;
+	valign: middle;
+	font-size: 12px;
+	text-align: center;
+	align: center;
+	border-collapse:collapse;
+}
+
+table.sgy tr.detailHeader td {
+	background-image: url('images/panel_title.png');/*使用的easyui的图片样式，有的皮肤可能是gif的图片*/
+	background-position:left -1px;
+	text-valign: middle;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+	font-family: "微软雅黑","Tahoma", "Arial", "宋体";
+	height: 25px;
+	color:#15428B;
+	border-collapse:collapse;
+}
+
+table.sgy tr.pageheader td {
+	background-image: url('images/panel_title.png');/*使用的easysui的图片样式，有的皮肤可能是gif的图片*/
+	background-position:left 0px;
+	text-valign: middle;
+	text-align: left;
+	font-weight: bold;
+	font-size: 15px;
+	font-family: "微软雅黑","Tahoma", "Arial", "宋体";
+	height: 25px;
+	color:#15428B;
+	border: 0px;
+	border-bottom:1px solid #BEBEBE;
+	border-collapse:collapse;
+}
+
+table.sgy td.outDetail {
+	background-color: #E1ECFE;/*取tab标签的颜色*/
+	padding: 0px 10px 0px 0px !important;
+	text-align: right;
+	border-collapse:collapse;
+}
+
+table.sgy td.outDetail2 {
+	background-color: white;
+	padding: 0px 0px 0px 3px !important;
+	text-align: left;
+	word-break: break-all;
+	word-wrap:break-word;
+	border-collapse:collapse;
+}
+
+table.sgy tr.pagesearch td {
+	border: 0;
+	font-weight: normal;
+	height: 30px;
+	border-collapse:collapse;
+	margin-bottom: 5px;
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
+	background-color: #fafafa;/*配合easyui的样式  使用easyui.css中的.combobox-item-hover背景*/
+	text-align: left;
+	padding-left: 20px !important;
+}
+
+body.sgy input{
+	font-family: "微软雅黑", "Tahoma", "Arial", "宋体";
+	font-size: 12px;
+	color: #000000;
+	outline:none;
+	padding: 2px 0px 0px 2px;
+}
+
+input {
+	border: expression((this.type=="text" || this.type=="password" || this.type=="button" ||this.type=="file" )? "1px solid #9EB1BC":"");
+	color:#709BD0;
+	height: expression((this.type=="text" || this.type=="password" || this.type=="button" ||this.type=="file" )? "22px":"");
+	vertical-align: middle;
+}
+
+select {
+	vertical-align: middle;
+}
+
+span.combo input {
+	clear:both;
+	border: 0px !important;
+	margin-top: 1px;
+	padding: 2px 0px 0px 2px;
+}
+
+td.outDetail2 input {
+	size: 18;
+}
+
+body.sgy  a:link {
+	font-family: "微软雅黑", "Tahoma", "Arial", "宋体";
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+
+body.sgy  a:visited {
+	font-family: "微软雅黑", "Tahoma", "Arial", "宋体";
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+
+body.sgy  a:hover {
+	font-family: "微软雅黑", "Tahoma", "Arial", "宋体";
+	font-size: 12px;
+	color: #000000;
+	text-decoration: underline;
+}
+
+body.sgy div.sgy {
+	text-align: center;
+	font-size:12px;
+}
+
+.btn{
+	/*background:url(http://s1.bdstatic.com/r/www/img/i-1.0.0.png) repeat-x;*/
+	padding: 1px 5px 1px 5px;
+	text-align:center;
+	height:24px;
+	width:auto;
+	cursor: pointer;
+	border:1px solid #8DB2E3;
+	background-color:transparent;
+	filter:progid:DXImageTransform.Microsoft.Gradient(gradientType=0, enabled='true',startColorStr='#EDF2FA', endColorStr='#BCD8FF');
+	background: -moz-linear-gradient(top, #EDF2FA 0%, #BCD8FF 150%);
+	background: -webkit-gradient(linear, 0% 0%, 0% 150%, from(#EDF2FA), to(#BCD8FF));
+}
+
+.smallBtn{
+	padding: 1px 2px 1px 2px;
+	text-align:center;
+	height:20px;
+	width:auto;
+	cursor: pointer;
+	border:1px solid #8DB2E3;
+	background-color:transparent;
+	filter:progid:DXImageTransform.Microsoft.Gradient(gradientType=0, enabled='true',startColorStr='#EDF2FA', endColorStr='#BCD8FF');
+	background: -moz-linear-gradient(top, #EDF2FA 0%, #BCD8FF 150%);
+	background: -webkit-gradient(linear, 0% 0%, 0% 150%, from(#EDF2FA), to(#BCD8FF));
+}

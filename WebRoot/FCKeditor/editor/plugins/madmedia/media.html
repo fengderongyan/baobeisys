@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--
+ * For FCKeditor 2.3
+ * 
+ * File Name: media.html
+ * 	Media Plugin.
+ * 
+ * File Authors:
+ * 		Madpolice (madpolice_dong@163.com) 20060726
+-->
+<html>
+	<head>
+		<title>Media Properties</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta content="noindex, nofollow" name="robots">
+		<script src="../../dialog/common/fck_dialog_common.js" type="text/javascript"></script>
+		<script src="media.js" type="text/javascript"></script>
+		<link href="../../dialog/common/fck_dialog_common.css" type="text/css" rel="stylesheet">
+	</head>
+	<body scroll="no" style="OVERFLOW: hidden">
+		<div id="divInfo">
+			<table cellSpacing="1" cellPadding="1" width="100%" border="0">
+				<tr>
+					<td>
+						<table cellSpacing="0" cellPadding="0" width="100%" border="0">
+							<tr>
+								<td width="100%"><span fckLang="DlgImgURL">URL</span>
+								</td>
+								<td id="tdBrowse" style="DISPLAY: none" noWrap rowSpan="2">&nbsp; <input id="btnBrowse" onclick="BrowseServer();" type="button" value="Browse Server" fckLang="DlgBtnBrowseServer">
+								</td>
+							</tr>
+							<tr>
+								<td vAlign="top"><input id="txtUrl" style="WIDTH: 100%" type="text">
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td><span fckLang="DlgImgAlt">Short Description</span><br />
+						<input id="txtAlt" style="WIDTH: 100%" type="text"></td>
+				</tr>
+				<tr>
+					<td vAlign="top"><table cellSpacing="0" cellPadding="12" width="100%" border="0">
+							<tr>
+								<td valign="top" nowrap><table border="0" cellPadding="4" cellSpacing="0">
+										<TR>
+											<TD nowrap><span fckLang="DlgMadMediaId">Media Id</span>&nbsp;</TD>
+											<TD nowrap><input type="text" id="txtAttId" size="5"></TD>
+										</TR>
+										<TR>
+											<TD colspan="2" nowrap></TD>
+										</TR>
+										<TR>
+											<TD nowrap><label for="chkAutoPlay" nowrap fckLang="DlgFlashChkPlay">Auto Play</label>
+												&nbsp;</TD>
+											<TD nowrap><input id="chkAutoPlay" type="checkbox"></TD>
+										</TR>
+									</table></td>
+								<td width="100%" valign="top"><table border="0" cellpadding="4" cellspacing="0">
+										<TR>
+											<TD nowrap><span fckLang="DlgImgWidth">Width</span>&nbsp;</TD>
+											<TD nowrap><input type="text" class="FCK__FieldNumeric" id="txtWidth" value="420" size="3"></TD>
+										</TR>
+										<TR>
+											<TD nowrap><span fckLang="DlgImgHeight">Height</span>&nbsp;</TD>
+											<TD nowrap><input type="text" class="FCK__FieldNumeric" id="txtHeight" value="280" size="3"></TD>
+										</TR>
+									</table></td>
+							</tr>
+							<tr>
+								<td colspan="2" valign="top">*&nbsp;<span fckLang="DlgMadMediaSupportType">Support MP3,Windows Media,Real,etc.</span></td>
+							</tr>
+						</table></td>
+				</tr>
+			</table>
+		</div>
+		<div id="divUpload" style="DISPLAY: none">
+			<form id="frmUpload" method="post" target="UploadWindow" enctype="multipart/form-data" action="" onsubmit="return CheckUpload();">
+				<span fckLang="DlgLnkUpload">Upload</span><br />
+				<input id="txtUploadFile" style="WIDTH: 100%" type="file" size="40" name="NewFile" /><br />
+				<br />
+				<input id="btnUpload" type="submit" value="Send it to the Server" fckLang="DlgLnkBtnUpload" />
+				<iframe name="UploadWindow" style="DISPLAY: none" src="../../fckblank.html"></iframe> 
+			</form>
+		</div>
+	</body>
+</html>

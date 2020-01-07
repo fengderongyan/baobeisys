@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ * FCKeditor - The text editor for Internet - http://www.fckeditor.net
+ * Copyright (C) 2003-2007 Frederico Caldeira Knabben
+ *
+ * == BEGIN LICENSE ==
+ *
+ * Licensed under the terms of any of the following licenses at your
+ * choice:
+ *
+ *  - GNU General Public License Version 2 or later (the "GPL")
+ *    http://www.gnu.org/licenses/gpl.html
+ *
+ *  - GNU Lesser General Public License Version 2.1 or later (the "LGPL")
+ *    http://www.gnu.org/licenses/lgpl.html
+ *
+ *  - Mozilla Public License Version 1.1 or later (the "MPL")
+ *    http://www.mozilla.org/MPL/MPL-1.1.html
+ *
+ * == END LICENSE ==
+ *
+ * This is the sample templates definitions file. It makes the "templates"
+ * command completely customizable.
+ *
+ * See FCKConfig.TemplatesXmlPath in the configuration file.
+-->
+<Templates imagesBasePath="fck_template/images/">
+	<Template title="文字图片" image="template1.gif">
+		<Description>左侧文字，右侧图片</Description>
+		<Html>
+			<![CDATA[
+<table height="307" cellspacing="1" cellpadding="1" width="540" border="0">
+    <tbody>
+        <tr>
+            <td valign="top" width="375" style="table-layout: fixed; word-wrap: break-word; break-all: break-all">
+            <p><br />
+            说明：</p>
+            <p>1、右侧图片大小：160 * 90，超出部分不显示</p>
+            <p>2、选择右侧图片右击，点击图像属性来替换图片，替换完成后将图片大小设置为160 * 90（设置自定义大小时需解锁，解锁键位于高度宽度右侧），否则超出部分不显示（图像大小支持拖拽）</p>
+            <p>3、增加或删除图片：右击图片--&gt;行--&gt;插入行--&gt;复制图片至新行--&gt;替换图片（图片超过3个将会显示滚动条）</p>
+            <p>4、发布后的表格边框不显示，具体效果点击下方预览按钮查看</p>
+            <p>5、左侧文字过多的话，页面会产生滚动条，不会撑破页面</p>
+            </td>
+            <td style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" valign="top" width="165">
+            <table style="table-layout: fixed; word-wrap: break-word; break-all:break-all " height="300" cellpadding="3" width="165" border="0">
+                <tbody>
+                    <tr style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px">
+                        <td style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="90"><img class="" height="90" alt="" width="160"/></td>
+                    </tr>
+                    <tr style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px">
+                        <td style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="90"><img class="" height="90" alt="" width="160"/></td>
+                    </tr>
+                    <tr style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px">
+                        <td style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="90"><img class="" height="90" alt="" width="160"/></td>
+                    </tr>
+                </tbody>
+            </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+			]]>
+		</Html>
+	</Template>
+	<Template title="全屏图片" image="template2.gif">
+		<Description>图片大小全屏为550 * 310</Description>
+		<Html>
+			<![CDATA[
+<table style="table-layout: fixed; word-wrap: break-word; break-all: break-all" height="310" cellspacing="0" cellpadding="0" width="550" border="0">
+    <tbody>
+        <tr style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="310" width="550">
+            <td style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" width="550" height="310" valign="top"><img class="" src="" width="550" height="310"/></td>
+        </tr>
+    </tbody>
+</table>
+			]]>
+		</Html>
+	</Template>
+	<Template title="文字环绕(左侧图片)" image="template3.gif">
+		<Description>左上角图片，右侧及下方环绕详细内容</Description>
+		<Html>
+			<![CDATA[
+<table style="margin-left: 10px" cellspacing="0" cellpadding="0" width="530" border="0">
+    <tbody>
+        <tr style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" width="530">
+            <td style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" valign="top" width="530">
+            <div id="new_pro">
+            <p><img class="" style="float: left; margin: 5px" height="180" alt="" width="240" />&nbsp;<br />
+            说明：</p>
+            <p>1、如果多个图片及描述的话，直接在本模板之下追加模板即可（打开内容模板，取消下方"替换当前内容"即可追加）</p>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+			]]>
+		</Html>
+	</Template>
+	<Template title="文字环绕(右侧图片)" image="template4.gif">
+		<Description>右上角图片，左侧及下方环绕详细内容</Description>
+		<Html>
+			<![CDATA[
+<table style="margin-left: 10px" cellspacing="0" cellpadding="0" width="530" border="0">
+    <tbody>
+        <tr style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" width="530">
+            <td style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" valign="top" width="530">
+            <div id="new_pro">
+            <p><img class="" style="float: right; margin: 5px" height="180" alt="" width="240" />&nbsp;<br />
+            说明：</p>
+            <p>1、如果多个图片及描述的话，直接在本模板之下追加模板即可（打开内容模板，取消下方"替换当前内容"即可追加）</p>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+			]]>
+		</Html>
+	</Template>
+	<Template title="图片文字(上方居中图片)" image="template5.gif">
+		<Description>上方居中图片，下方正文</Description>
+		<Html>
+			<![CDATA[
+<table height="307" cellspacing="0" cellpadding="0" width="540" border="0">
+    <tbody>
+        <tr style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="105" width="540">
+            <td style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" valign="top" align="center" width="540" height="150" alt=""><img style="margin-top: 10px; width: 312px; height: 140px" alt="" td="" /></td>
+        </tr>
+        <tr style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" width="540">
+            <td style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" valign="top" width="540">&nbsp;&nbsp;&nbsp;&nbsp;正文内容</td>
+        </tr>
+    </tbody>
+</table>
+			]]>
+		</Html>
+	</Template>
+	<Template title="图片文字(下方居中图片)" image="template6.gif">
+		<Description>上方正文，下方居中图片</Description>
+		<Html>
+			<![CDATA[
+<table height="307" cellspacing="0" cellpadding="0" width="540" border="0">
+    <tbody>
+        <tr style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" width="540">
+            <td style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" valign="top" width="540">&nbsp;&nbsp;&nbsp;&nbsp;正文内容</td>
+        </tr>
+        <tr style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="105" width="540">
+            <td style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" valign="top" align="center" width="540" height="150" alt=""><img style="margin-top: 5px;margin-bottom: 5px; width: 312px; height: 140px" alt="" td="" /></td>
+        </tr>
+    </tbody>
+</table>
+			]]>
+		</Html>
+	</Template>
+	<Template title="四方格" image="template7.gif">
+		<Description>四个大小一样的单元格</Description>
+		<Html>
+			<![CDATA[
+<table height="307" cellspacing="0" cellpadding="1" width="540" border="0">
+    <tbody>
+        <tr height="153" width="540">
+            <td style="border-top-width: 0px; border-right: 1px dashed; border-left-width: 0px; border-bottom-width: 0px" valign="top" width="270">1</td>
+            <td style="border-top-width: 0px; border-bottom-width: 0px; border-left: 1px dashed; border-right-width: 0px" valign="top" width="270">2</td>
+        </tr>
+        <tr height="154" width="540">
+            <td style="border-top-width: 0px; border-right: 1px dashed; border-left-width: 0px; border-bottom-width: 0px" valign="top" width="270">1</td>
+            <td style="border-top-width: 0px; border-bottom-width: 0px; border-left: 1px dashed; border-right-width: 0px" valign="top" width="270">2</td>
+        </tr>
+    </tbody>
+</table>
+			]]>
+		</Html>
+	</Template>
+</Templates>

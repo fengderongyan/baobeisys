@@ -1,0 +1,175 @@
+table.list td {
+	valign:middle;
+}
+
+table.list{
+	border-collapse: collapse;
+	color: #14397D;
+	font-size: 12px;
+	width:100%;
+	height: 22px;
+	border: none;
+}
+
+table.list thead tr {
+	background-image: url('images/datagrid_header_bg.gif');/*使用的easyui的图片样式，有的皮肤可能是gif的图片*/
+	background-position: 0px -10px;
+	background-repeat: repeat-x;
+	font-size: 12px;
+	color: #14397D;
+	height: 24px;
+}
+
+table.list tr.even {
+	background-color: #F5F5F5;/*配合easyui的样式*/	
+}
+
+table.list tr.odd {
+	background-color: #FFFFFF;	
+}
+
+table.noborder{
+	border:0;
+}
+
+table.noboder tr {
+	border:0;
+}
+
+table.noboder td {
+	border:0;
+}
+
+table.normal td {
+	valign:middle;
+}
+
+
+table.normal{
+	border-collapse: collapse;
+	background-color: #76ABD3;
+	color: #14397D;
+	font-size: 12px;
+	width:100%;
+	height: 22px;
+	border: none;
+}
+
+table.normal thead tr {
+	background-image: url('images/datagrid_header_bg.gif');/*使用的easyui的图片样式，有的皮肤可能是gif的图片*/
+	background-position: 0px -10px;
+	background-repeat: repeat-x;
+	font-size: 12px;
+	color: #14397D;
+	height: 24px;
+}
+
+.displayTable th,.displayTable td {
+	padding: 1px 4px 1px 4px !important;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #CCCCCC;
+	height: 22px;
+}
+.displayTable th {
+	background-image: url('images/datagrid_header_bg.gif'); /*使用的easyui的图片样式，有的皮肤可能是gif的图片*/
+	background-repeat: repeat-x;
+	background-position:left top;
+	height: 26px;
+}
+
+th a,th a:visited {
+	text-decoration: underline;	
+	color: black;
+}
+
+th a:hover {
+	text-decoration: underline;
+	color: black;
+}
+
+th.sorted a,th.sortable a {
+	background-position: right;
+	display: block;
+	width: 100%;	
+}
+
+/*************tyyy此处需要有调整 图片引用的路径***********/
+th.sortable a {
+	background-image: url('/images/arrow_off.png');
+	background-repeat: no-repeat;
+}
+
+th.order1 a {
+	background-image: url('/images/arrow_down.png');
+	background-repeat: no-repeat;
+}
+
+th.order2 a {
+	background-image: url('/images/arrow_up.png');
+	background-repeat: no-repeat;
+}
+
+tr.head {
+	background-color: #EFFFFF;
+	height: 22px;
+	font-weight: bold;
+}
+
+tr.odd {
+	background-color: #F3F7FD;
+	height: 22px;
+}
+
+div.exportlinks {
+	background-color: #eee;
+	padding: 2px 4px 2px 4px;
+	border: 1px dotted #999;
+	margin: 2px 0 10px 0;
+	text-align: left;
+	font-size:15px;	
+	position: relative;
+	left: expression(this.offsetParent.scrollLeft);
+}
+
+span.export {
+	padding: 0 4px 1px 4px;
+	display: inline-block;
+	cursor: pointer;
+	text-align: left;
+	width:100%;
+}
+
+span.pagebanner {
+	background-color: #eee;
+	padding: 2px 4px 2px 4px;
+	border: 1px dotted #999;
+	width: 100%;
+	margin-top: 10px;
+	display: block;
+	border-bottom: none;
+}
+
+span.pagelinks {
+	background-color: #eee;
+	padding: 2px 4px 2px 4px;
+	border: 1px dotted #999;
+	width: 100%;
+	display: block;
+	border-top: none;
+	margin-bottom: -5px;
+	text-align:left;
+	position: relative;
+	left: expression(this.offsetParent.scrollLeft);
+	height: 25px;
+}
+
+.right {
+	width: 65%;
+	text-align: right;
+}
+
+.left {
+	width: 35%;
+	text-align: left;
+}

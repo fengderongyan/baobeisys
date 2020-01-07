@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<weblogic-web-app xmlns="http://www.bea.com/ns/weblogic/90"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+				 http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd  
+				 http://www.bea.com/ns/weblogic/90  
+				 http://www.bea.com/ns/weblogic/90/weblogic-web-app.xsd">
+	<container-descriptor>
+		<prefer-web-inf-classes>true</prefer-web-inf-classes>
+	</container-descriptor>
+	<!-- 远程上线 打开注释
+	<context-root>/</context-root>
+	 -->
+	<session-descriptor>
+		<cookie-name>JSESSIONID_baobeisys</cookie-name>
+	</session-descriptor>
+</weblogic-web-app>

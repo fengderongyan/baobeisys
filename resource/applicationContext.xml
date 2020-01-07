@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>    
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation=" 
+          http://www.springframework.org/schema/beans 
+          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+          http://www.springframework.org/schema/tx 
+          http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+          http://www.springframework.org/schema/context 
+          http://www.springframework.org/schema/context/spring-context-3.0.xsd 
+          http://www.springframework.org/schema/aop 
+          http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+	
+	<!-- 引入配置文件 -->
+	<context:property-placeholder location="classpath:com/sgy/util/db/commons-dbcp.properties" ignore-unresolvable="true"/>
+	<context:property-placeholder location="classpath:weixinpay.properties" ignore-unresolvable="true"/>
+	<context:property-placeholder location="classpath:wxurl.properties" ignore-unresolvable="true"/>
+	<context:property-placeholder location="classpath:redis.properties" ignore-unresolvable="true"/>
+	
+	<!-- <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource">
+	     <property name="driverClassName" value="${driverClassName}" />无需指定，除非系统无法自动识别  
+		 <property name="jdbcUrl" value="${url}" />  
+		 <property name="username" value="${username}" />  
+		 <property name="password" value="${password}" />  
+		  连接只读数据库时配置为true， 保证安全  
+		 <property name="readOnly" value="false" />
+		 <property name="connectionTestQuery" value="SELECT 1" />
+		 生效超时
+		 <property name="validationTimeout" value="3000" />  
+		 等待连接池分配连接的最大时长（毫秒），超过这个时长还没可用的连接则发生SQLException， 缺省:30秒  
+		 <property name="connectionTimeout" value="30000" />  
+		 一个连接idle状态的最大时长（毫秒），超时则被释放（retired），缺省:10分钟  
+		 <property name="idleTimeout" value="600000" />  
+		 一个连接的生命时长（毫秒），超时而且没被使用则被释放（retired），缺省:30分钟，建议设置比数据库超时时长少30秒，参考MySQL wait_timeout参数（show variables like '%timeout%';）  
+		 <property name="maxLifetime" value="28700000" />  
+		 连接池中允许的最大连接数。缺省值：10；推荐的公式：((core_count * 2) + effective_spindle_count)  
+		 <property name="maximumPoolSize" value="8" />
+	</bean> -->
+	
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="${driverClassName}" />
+		<property name="url" value="${url}" />
+		<property name="username" value="${username}" />
+		<property name="password" value="${password}" />
+		<!--最大连接数量 -->
+		<property name="maxActive" value="${maxActive}" />
+		
+	</bean>
+	
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+ 
+	<!-- 编程式事务管理 -->
+	<bean id="transactionTemplate"
+		class="org.springframework.transaction.support.TransactionTemplate">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+	</bean>
+
+	<!-- 操作LOB配置 -->
+	<!-- (just needed for oracleLobHandler) -->
+	<bean id="nativeJdbcExtractor"
+		class="org.springframework.jdbc.support.nativejdbc.SimpleNativeJdbcExtractor"
+		lazy-init="true" />
+
+	<bean id="lobHandler"
+		class="org.springframework.jdbc.support.lob.OracleLobHandler"
+		lazy-init="true">
+		<property name="nativeJdbcExtractor" ref="nativeJdbcExtractor" />
+	</bean>
+	
+	<bean id="dbHelper" class="com.sgy.util.db.DBHelperSpring">
+		<property name="dataSource" ref="dataSource" />
+		<property name="transactionTemplate" ref="transactionTemplate" />
+		<property name="lobHandler" ref="lobHandler"/>
+	</bean>
+	
+	<bean id="dateHelper" class="com.sgy.util.common.DateHelper" />
+	<bean id="springHelper" class="com.sgy.util.spring.SpringHelper" />
+	
+	<!-- 初始化系统信息 -->
+	<bean id="systemInfo" class="web.bean.SystemInfo" init-method="loadSystemData" lazy-init="true">
+		<property name="db" ref="dbHelper" />
+	</bean>
+	
+	<!-- 系统日志  -->
+	<bean id="systemLogService" class="web.service.systemlog.SystemLogService" scope="singleton">
+		<property name="db" ref="dbHelper"/>
+	</bean>
+	
+	<!-- 客户端系统日志  -->
+	<bean id="mobileLogService" class="moi.service.log.MobileLogService" scope="singleton">
+		<property name="db" ref="dbHelper"/>
+	</bean>
+	
+	<!-- 线程 -->
+	<bean id="doorStatusUpdate" class="baobeisys.application.DoorStatusUpdate" scope="singleton">
+		<property name="db" ref="dbHelper"/>
+	</bean>
+	
+	<bean id="defaultExceptionHandler" class="web.exception.DefaultExceptionHandler"></bean>
+	<!-- 引入Shiro配置 -->
+	<import resource="applicationContext-shiro.xml" />
+	<!-- 引入Redis配置 -->
+	<import resource="applicationContext-redis.xml" />
+	
+	
+</beans>

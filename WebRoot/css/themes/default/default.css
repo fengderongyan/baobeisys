@@ -1,0 +1,611 @@
+@CHARSET "UTF-8";
+
+/**
+ * @author: chang  
+ */
+
+body {
+	background-color: #EAF7FA;
+	font-size: 12px;
+	font-family: "微软雅黑","Tahoma","Arial","宋体";
+	
+	scrollbar-face-color:#f7f7f7;
+	scrollbar-highlight-color:#ffffff;
+	scrollbar-shadow-color:#ffffff;
+	scrollbar-3dlight-color:#d4d0c8;
+	scrollbar-arrow-color:#808080;
+	scrollbar-track-color:#ffffff;
+	scrollbar-darkshadow-color:#d4d0c8;
+}
+
+.queryPanel {
+	border: 0px;
+	width: 100%;
+}
+
+.queryPanel .queryPanel_title {
+	border: 1px solid #D3D3D3;
+	margin: 5px;
+	padding: 8px;
+	font-weight: bold;
+	cursor: pointer;
+	background-image: url("images/title_bg.png");
+	background-repeat: repeat-x;
+	background-position: left -15px;
+}
+
+.queryPanel .queryPanel_title .queryPanel_title_collapse {
+	background-image: url('images/panel_collapse.png');
+	background-position:left 1px;
+	width:15px;
+	height:15px;
+	float:left;
+}
+
+.queryPanel .queryPanel_title .queryPanel_title_expand {
+	background-image: url('images/panel_expand.png');
+	background-position:left 1px;
+	width:15px;
+	height:15px;
+	float:left;
+}
+
+.queryPanel .queryPanel_content {
+	border: 0px;
+	margin: 5px 20px 5px 20px;
+}
+
+.queryPanel .queryPanel_content table.search {
+	border: 0px;
+	border-collapse: collapse;
+}
+
+.queryPanel .queryPanel_content table.search tr {
+	height: 30px;
+}
+
+.queryPanel .queryPanel_content table.search tr td {
+	font-size: 12px;
+}
+
+.queryPanel .queryPanel_content table.search tr td.outDetail {
+	text-align: right;
+}
+
+.queryPanel .queryPanel_content table.search tr td.outDetail2 {
+	padding-left: 5px;
+	text-align: left;
+}
+
+.queryPanel .queryPanel_content .queryPanel_footer {
+	border: 0px;
+	text-align: right;
+	margin-top: 5px;
+}
+
+input{
+	font-family: "微软雅黑","Tahoma","Arial","宋体";
+	font-size: 12px;
+	color: #000000;
+	outline: none;
+	padding: 4px 0px 4px 4px;
+	border: expression((this.type=="text" || this.type=="password" || this.type=="button" ||this.type=="file" )? "1px solid #9EB1BC":"");
+	vertical-align: middle;
+	border: 1px solid #DEDEDE;
+}
+
+input.search_input{
+	font-family: "微软雅黑","Tahoma","Arial","宋体";
+	font-size: 12px;
+	color: #000000;
+	outline: none;
+	padding: 4px 10px 4px 8px;
+	border: 1px solid #9EB1BC;
+	vertical-align: middle;
+	border-radius: 10px 10px 10px 10px;
+}
+
+input.up_file{
+	font-family: "微软雅黑","Tahoma","Arial","宋体";
+	font-size: 12px;
+	color: #000000;
+	outline: none;
+	padding: 0px 0px 0px 0px;
+	border: 1px solid #9EB1BC;
+	vertical-align: middle;
+}
+
+span.combo input {
+	clear:both;
+	border: 0px !important;
+	margin-top: 1px;
+	padding: 2px 0px 0px 2px;
+}
+
+select {
+	vertical-align: middle;
+	outline: none;
+	height: 23px;
+	font-family: "微软雅黑","Tahoma","Arial","宋体";
+	font-size: 12px;
+	z-index: -999!important;
+}
+
+table.sgy {
+	border: 0px;
+	border-collapse: collapse;
+}
+
+table.sgy td, table.sgy th {
+	border: 1px solid #D3D3D3;
+}
+
+table.sgy th {
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+a{
+	text-decoration: none;
+	color: #646464;
+	display: inline-block;
+	outline: none;
+	cursor:pointer;
+	blur: expression(this.onFocus=this.blur());
+}
+
+a:focus {
+     outline:none;
+}
+
+/********************表单表格样式***********************/
+table.form_table {
+	border: 1px solid #D3D3D3;
+	border-collapse: collapse;
+	background-color: #C7EDCC;
+}
+
+table.form_table td, table.form_table th {
+	border: 1px solid #8B8E8E;
+	padding: 1px;
+	font-size: 13px;
+}
+
+table.form_table th {
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+table.form_table tr {
+	height: 25px;
+}
+
+table.form_table td.outDetail {
+	text-align: center;
+	font-size: 13px;
+	background-color: #ECF7FF;
+}
+
+table.form_table td.outDetail2 {
+	text-align: left;
+	padding-left: 5px;
+	background-color: #FFFFFF;
+}
+
+table.form_table tr.outHeader td {
+	background-image: url(/baobeisys/images/tabbg.gif);
+	background-position:left -1px;
+	text-valign: middle;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+	height: 26px;
+	color:#15428B;
+	border-collapse:collapse;
+}
+
+/********************详细表格样式***********************/
+table.detail_table {
+	border: 1px solid #D3D3D3;
+	border-collapse: collapse;
+}
+
+table.detail_table td, table.detail_table th {
+	border: 0px;
+	padding: 5px;
+	background-color: #FFFFFF;
+	border-bottom:1px dashed #D3D3D3;
+}
+
+table.detail_table th {
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+table.detail_table td.outDetail {
+	text-align: right;
+}
+
+table.detail_table td.outDetail2 {
+	text-align: left;
+	padding-left: 5px;
+	color:#636262;
+}
+
+/**************圆角按钮样式**************/
+a.ovalbutton{
+	background-image:url("images/button_a_bg11.png");
+	background-position: right 0;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: inline-block;
+	height: 24px;
+	padding-right: 18px;
+	cursor: pointer;
+	outline: none;
+}
+
+a:link.ovalbutton, a:visited.ovalbutton, a:active.ovalbutton{
+	color: black; 
+}
+
+a.ovalbutton span{
+	background-image: url("images/button_span_bg11.png");
+	background-repeat: no-repeat;
+	display: inline-block;
+	background-position: 0 0;
+	padding: 3px 0px 5px 18px;
+	line-height: 16px;
+	height: 16px;
+	color:white;
+	font-family: "微软雅黑","Tahoma","Arial","宋体";
+	font-size: 12px;
+}
+
+a.ovalbutton:hover{
+	background-position: bottom right;
+}
+
+a.ovalbutton:hover span{ 
+	background-position: bottom left;
+	color: white;
+}
+
+/***************按钮样式蓝色*************************/
+a.ovalBtn_blue{
+	background-image:url("images/button_a_bg1.png");
+	background-position: right 0;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: inline-block;
+	height: 24px;
+	padding-right: 18px;
+	cursor: pointer;
+	outline: none;
+}
+
+a:link.ovalBtn_blue, a:visited.ovalBtn_blue, a:active.ovalBtn_blue{
+	color: black; 
+}
+
+a.ovalBtn_blue span{
+	background-image: url("images/button_span_bg1.png");
+	background-repeat: no-repeat;
+	display: inline-block;
+	background-position: 0 0;
+	padding: 4px 0px 4px 18px;
+	line-height: 16px;
+	height: 16px;
+	font-family: "微软雅黑","Tahoma","Arial","宋体";
+}
+
+a.ovalBtn_blue:hover{
+	background-position: bottom right;
+}
+
+a.ovalBtn_blue:hover span{ 
+	background-position: bottom left;
+	color: black;
+}
+
+/***************按钮样式银白色*************************/
+a.ovalBtn_gray{
+	background-image:url("images/button_a_bg2.png");
+	background-position: right 0;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: inline-block;
+	height: 24px;
+	padding-right: 18px;
+	cursor: pointer;
+	outline: none;
+}
+
+a:link.ovalBtn_gray, a:visited.ovalBtn_gray, a:active.ovalBtn_gray{
+	color: black; 
+}
+
+a.ovalBtn_gray span{
+	background-image: url("images/button_span_bg2.png");
+	background-repeat: no-repeat;
+	display: inline-block;
+	background-position: 0 0;
+	padding: 4px 0px 4px 18px;
+	line-height: 16px;
+	height: 16px;
+	font-family: "微软雅黑","Tahoma","Arial","宋体";
+}
+
+a.ovalBtn_gray:hover{
+	background-position: bottom right;
+}
+
+a.ovalBtn_gray:hover span{ 
+	background-position: bottom left;
+	color: black;
+}
+
+/***************按钮样式绿色*************************/
+a.ovalBtn_green{
+	background-image:url("images/button_a_bg3.png");
+	background-position: right 0;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: inline-block;
+	height: 24px;
+	padding-right: 18px;
+	cursor: pointer;
+	outline: none;
+}
+
+a:link.ovalBtn_green, a:visited.ovalBtn_green, a:active.ovalBtn_green{
+	color: black; 
+}
+
+a.ovalBtn_green span{
+	background-image: url("images/button_span_bg3.png");
+	background-repeat: no-repeat;
+	display: inline-block;
+	background-position: 0 0;
+	padding: 4px 0px 4px 18px;
+	line-height: 16px;
+	height: 16px;
+	font-family: "微软雅黑","Tahoma","Arial","宋体";
+}
+
+a.ovalBtn_green:hover{
+	background-position: bottom right;
+}
+
+a.ovalBtn_green:hover span{ 
+	background-position: bottom left;
+	color: black;
+}
+
+/***************按钮样式深蓝*************************/
+a.ovalBtn_blue2{
+	background-image:url("images/button_a_bg4.png");
+	background-position: right 0;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: inline-block;
+	height: 24px;
+	padding-right: 18px;
+	cursor: pointer;
+	outline: none;
+}
+
+a:link.ovalBtn_blue2, a:visited.ovalBtn_blue2, a:active.ovalBtn_blue2{
+	color: black; 
+}
+
+a.ovalBtn_blue2 span{
+	background-image: url("images/button_span_bg4.png");
+	background-repeat: no-repeat;
+	display: inline-block;
+	background-position: 0 0;
+	padding: 4px 0px 4px 18px;
+	line-height: 16px;
+	height: 16px;
+	font-family: "微软雅黑","Tahoma","Arial","宋体";
+}
+
+a.ovalBtn_blue2:hover{
+	background-position: bottom right;
+}
+
+a.ovalBtn_blue2:hover span{ 
+	background-position: bottom left;
+	color: black;
+}
+
+/***************小按钮*************************/
+a.smallBtn_gray{
+	background-image:url("images/small_a_bg.png");
+	background-position: right 0;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: inline-block;
+	height: 20px;
+	padding-right: 5px;
+	cursor: pointer;
+	outline: none;
+	margin-top: 2px;
+}
+
+a:link.smallBtn_gray, a:visited.smallBtn_gray, a:active.smallBtn_gray{
+	color: black; 
+}
+
+a.smallBtn_gray span{
+	background-image: url("images/small_span_bg.png");
+	background-repeat: no-repeat;
+	display: inline-block;
+	background-position: 0 0;
+	padding: 4px 0px 4px 5px;
+	line-height: 12px;
+	height: 12px;
+	font-family: "微软雅黑","Tahoma","Arial","宋体";
+	color: black;
+}
+
+a.smallBtn_gray:hover{
+	background-position: bottom right;
+}
+
+a.smallBtn_gray:hover span{ 
+	background-position: bottom left;
+	color: black;
+}
+/**************圆角按钮样式 end**************/
+
+/***************小按钮2*************************/
+a.smallBtn_2{
+	background-color: #F3F3F3;
+	text-decoration: none;
+	display: inline-block;
+	height: 20px;
+	padding-right: 0px;
+	cursor: pointer;
+	outline: none;
+	margin-bottom: 2px;
+}
+
+a:link.smallBtn_2, a:visited.smallBtn_2, a:active.smallBtn_2{
+	color: black; 
+}
+
+a.smallBtn_2 span{
+	background-color: #F3F3F3;
+	display: inline-block;
+	padding: 4px 5px 4px 5px;
+	line-height: 12px;
+	height: 12px;
+	font-family: "微软雅黑","Tahoma","Arial","宋体";
+	color: black;
+	border: 1px solid #D3D3D3;
+}
+
+a.smallBtn_2:hover{
+	background-color: #FCF2F2;
+}
+
+a.smallBtn_2:hover span{ 
+	background-color: #FCF2F2;
+	color: black;
+}
+/**************小按钮2样式 end**************/
+
+.smallBtn{
+	padding: 3px 5px 3px 5px;
+	text-align:center;
+	cursor: pointer;
+	border:1px solid #E1E5E8;
+	background-color:transparent;
+	filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr=#FBFBFC,endColorStr=#95B8E7,gradientType=0);
+	background: -moz-linear-gradient(top, #FBFBFC 0%, #95B8E7 150%);
+	background: -webkit-gradient(linear, 0% 0%, 0% 150%, from(#FBFBFC), to(#95B8E7));
+}
+
+.divPanel {
+	border: 0px;
+}
+
+.divPanel .divPanel_title {
+	border: 1px solid #D3D3D3;
+	margin: 0px;
+	padding: 8px;
+	font-weight: bold;
+	background-image: url("images/title_bg.png");
+	background-repeat: repeat-x;
+	background-position: left -15px;
+}
+
+.divPanel .divPanel_content {
+	border: 0px;
+	border-bottom: 1px solid #D3D3D3;
+	border-left: 1px solid #D3D3D3;
+	border-right: 1px solid #D3D3D3;
+}
+
+/****************************互联网选择样式**********************/
+.iselect {
+	float:left;
+	margin-right: 15px;
+	padding: 3px;
+}
+ 	
+.iselected {
+	float:left;
+	margin-right: 15px;
+	padding: 3px;
+	background-color: #F7AF32;
+}
+ 	
+.iselected a {
+	color:white;
+}
+ 	
+.iselect a {
+	color:#646464;
+}
+
+/**超过一定宽度变成省略号**/
+.word-clip {
+	overflow:hidden;  
+	white-space:nowrap;  
+	text-overflow:ellipsis; 
+}
+
+/**jquery.ui的combobox样式**/
+.ui-widget-content {
+	font-size: 12px !important;
+	font-family: "微软雅黑","Tahoma","Arial","宋体" !important;
+}
+.ui-button {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
+	border-left: 0px !important;
+}
+
+
+/***************按钮禁用样式*************************/
+a.ovalBtn_disable{
+	background-image:url('./images/button_a_bg2.png');
+	background-position: right 0;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: inline-block;
+	height: 24px;
+	padding-right: 18px;
+	cursor: pointer;
+	outline: none;
+}
+
+a:link.ovalBtn_disable, a:visited.ovalBtn_disable, a:active.ovalBtn_disable{
+	color: #5A5F62; 
+}
+
+a.ovalBtn_disable span{
+	background-image: url('./images/button_span_bg2.png');
+	background-repeat: no-repeat;
+	display: inline-block;
+	background-position: 0 0;
+	padding: 3px 0px 5px 18px;
+	line-height: 16px;
+	height: 16px;
+	color:#5A5F62;
+	font-family: "微软雅黑","Tahoma","Arial","宋体";
+}
+
+a.ovalBtn_disable:hover{
+	background-position: bottom right;
+}
+
+a.ovalBtn_disable:hover span{ 
+	background-position: bottom left;
+	color: #5A5F62;
+}

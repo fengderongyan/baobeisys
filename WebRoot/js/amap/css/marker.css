@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+/*地图点标记样式表*/
+.markerContentStyle{
+	position:relative;
+}
+
+.markerContentStyle span{
+	/**
+	clear:both;
+	background-color: #FFFFFF;
+	display:block;
+	width:auto;
+	padding:1px 2px;
+	border:1px solid #000033;
+	font-size:12px;
+	FONT-FAMILY:微软雅黑;
+	position:absolute;
+	vertical-align:bottom;
+	bottom:1px;
+	left:20px;
+	white-space:nowrap;
+	word-wrap: break-word;
+	-webkit-border-radius:5px;
+	borer-radius:5px;**/
+}
